@@ -28,150 +28,68 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="updated">Muhsin (formerly Authentic Dua) for iOS · Version 2.0 · Effective 14 October 2026</p>
+<p class="updated">Muhsin (formerly Authentic Dua) for iOS · Effective 14 October 2026</p>
 
 <p><strong>Muhsin has no accounts, no analytics and no tracking, and it collects no
-personal data; the Qibla direction is worked out entirely on your phone.</strong> Your
-favorites, bookmarks, and preferences are stored locally on your device.</p>
+personal data; the Qibla direction is worked out entirely on your phone.</strong> It has no
+ads and no third-party SDKs. Your favorites, bookmarks, and preferences stay on your device.</p>
 
-<h2>What Muhsin does and does not send</h2>
+<h2>What Muhsin sends</h2>
 <p>Quran audio is streamed or downloaded from a content delivery network when you play it;
 no account, no tracking, and no personal data is sent.</p>
 <p>Muhsin sends your approximate location (about 1 km) to a prayer-times service to
 compute prayer times; it is not stored by Muhsin and no account, identifier or other
 personal data is sent.</p>
-<p>Those are the only two things Muhsin sends anywhere. It looks up the name of the place
-you are in through Apple's own location services on your device. Nothing else leaves your
-device.</p>
+<p>Those are the only two things Muhsin sends anywhere. The name of the place shown in the
+header comes from Apple's own location services on your device.</p>
 
-<h2>Who makes Muhsin</h2>
-<p>Muhsin is made by Muhammad Azrin Zulbahrin, an independent developer. The developer runs
-no server for Muhsin and receives none of the data described on this page: requests go from
-your phone straight to the services named below. There is therefore nothing held by the
-developer to access, correct or delete on your behalf.</p>
-
-<h2>No data collection</h2>
-<p>The app requires no account and no sign-in. It contains no analytics, no crash
-reporting, no advertising, and no third-party software development kits. It never asks for
-your name, email address, contacts, photos, or any other personal information.</p>
-
-<h2>Prayer times and the Qibla</h2>
-<p>Prayer times are published by a prayer-times service for the place you are in. Muhsin
-uses four, and which one answers depends only on where you are and which calculation
-authority you have chosen:</p>
+<h2>Prayer times</h2>
+<p>Which service answers depends on where you are and the calculation authority you chose:</p>
 <ul>
-  <li><strong>Outside Malaysia, and inside Malaysia on any authority other than JAKIM:</strong>
+  <li><strong>Outside Malaysia, and in Malaysia on any authority other than JAKIM:</strong>
   <a href="https://aladhan.com">AlAdhan</a>, with <a href="https://ummahapi.com">UmmahAPI</a>
-  as an automatic fallback.</li>
-  <li><strong>Inside Malaysia on JAKIM</strong> (the default there): JAKIM publishes its
-  timetable per zone, so Muhsin asks
-  <a href="https://api.waktusolat.app/">waktusolat.app</a> which of the 60 JAKIM zones you
-  are in, and then reads the timetable for that zone from JAKIM's own
-  <a href="https://www.e-solat.gov.my/">e-Solat</a> service, with waktusolat.app as an
-  automatic fallback.</li>
+  as a fallback.</li>
+  <li><strong>In Malaysia on JAKIM:</strong> <a href="https://api.waktusolat.app/">waktusolat.app</a>
+  finds your JAKIM zone from the rounded location, then JAKIM's own
+  <a href="https://www.e-solat.gov.my/">e-Solat</a> service gives the timetable for that zone.
+  Only the zone code is sent for the timetable, with waktusolat.app as a fallback.</li>
 </ul>
-<p>What is sent, in every case:</p>
 <ul>
-  <li>If you allow location access, your coordinates are <strong>rounded to two decimal
-  places (about 1 km)</strong> before any request is made. The exact position never leaves
-  the device.</li>
-  <li>Inside Malaysia the rounded coordinate goes <strong>only</strong> to the zone lookup,
-  and once your zone is known <strong>only the zone code</strong> (for example "WLY01") is
-  sent for the timetable — no coordinates at all. The answer is kept on your device and
-  reused for up to thirty days, so the lookup is not repeated on every check.</li>
-  <li>If you decline, no location is used at all: you choose a city — or, in Malaysia, a
-  prayer zone — by name instead, and only that city name or zone code is sent. <strong>A
-  zone you choose yourself sends no location anywhere.</strong></li>
-  <li>The request carries the location, city or zone, the date and your chosen calculation
-  authority — nothing that identifies you or your device. The services do not receive an
-  account, an advertising identifier or any other personal data from Muhsin, and Muhsin does
-  not store your location anywhere except as the "last used" reference on your own device.</li>
-  <li><strong>No cookies are kept.</strong> These services are reached over a connection that
-  accepts no cookies and stores nothing between requests, so nothing that could identify you
-  is sent back to them.</li>
-  <li>As with any request over the internet, the service that answers can see the network
-  address (IP address) your connection uses. Muhsin adds nothing to it, and the developer
-  cannot see it. What a service keeps in its own server logs is governed by that service,
-  not by Muhsin; their sites are linked above.</li>
-  <li>The name shown in the header ("Kuala Lumpur") comes from Apple's reverse-geocoding
-  service, built into iOS, and it is given the same rounded coordinate — never your exact
-  position.</li>
-  <li>The <strong>Qibla direction is computed entirely on your device</strong> from your
-  position and the coordinates of the Kaaba. No request is made for it.</li>
+  <li>Your location is rounded to two decimal places (about 1 km) before anything is sent. The
+  exact position never leaves your device.</li>
+  <li>If you decline location access, you choose a city or prayer zone by name, and only that
+  name or zone code is sent.</li>
+  <li>No account, device identifier or advertising identifier is sent, and no cookies are kept.
+  As with any internet request, a service can see your IP address; what it keeps in its own
+  logs is up to that service.</li>
+  <li>iOS may repeat the same request in the background to keep alerts current. Muhsin never
+  takes a new location fix in the background.</li>
 </ul>
-<p>Apple's App Store privacy label for this app therefore reports <em>Coarse Location,
-used for App Functionality, not linked to your identity and not used for tracking</em>.</p>
 
 <h2>Recitation audio</h2>
-<p>Recitations are served from the audio network of Tarteel, the publisher of the
-<a href="https://qul.tarteel.ai">Quranic Universal Library</a>. When you press play, or
-download a reciter, your phone asks that host for the audio file. The request contains the
-path of the file. Like any website, the host can see the network address of your connection;
-Muhsin sends it no account, identifier or other personal data.</p>
+<p>Audio comes from Tarteel's audio network (audio-cdn.tarteel.ai). When you play or download a
+recitation, your phone requests the file from that host, which can see your IP address.
+Nothing else is sent.</p>
 
-<h2>Alerts, background refresh and the lock-screen widget</h2>
-<ul>
-  <li><strong>Prayer alerts</strong> are local notifications scheduled on your device. They
-  need your permission, which you can withdraw at any time in iOS Settings. Muhsin uses no
-  push server and no push token.</li>
-  <li><strong>The lock-screen widget</strong> shows prayer times already stored on your
-  device. The app and the widget share a store inside your device (an app group); the widget
-  makes no network requests at all.</li>
-  <li><strong>Background refresh:</strong> iOS may occasionally wake Muhsin to top up the
-  alerts. It repeats the same prayer-times request described above for the place you already
-  chose. It never takes a new location fix in the background.</li>
-</ul>
+<h2>On your device</h2>
+<p>Favorites, bookmarks, your reading position, preferences, downloaded audio and the last
+prayer times fetched stay on your device and are deleted with the app. Prayer alerts are local
+notifications, and the lock-screen widget only shows times already stored on your device.
+Muhsin has no server, and the developer receives none of this data.</p>
 
 <h2>Your choices</h2>
-<ul>
-  <li>Decline location access, or withdraw it in iOS Settings &gt; Privacy &amp; Security &gt;
-  Location Services &gt; Muhsin. Choose a city or prayer zone by name instead.</li>
-  <li>Turn prayer alerts off in Muhsin's Settings or in iOS Settings.</li>
-  <li>Remove downloaded or cached recitation audio from within the app.</li>
-  <li>Delete the app to delete everything it saved on your device.</li>
-</ul>
-
-<h2>Reading works offline</h2>
-<p>Everything you read is bundled inside the app — the Quran text and Mushaf pages, the
-supplications, the translations, the tafsirs and the context notes — so reading works with no
-network at all. You can also download a reciter in full for offline listening, and the prayer
-times last fetched for your location or zone are kept on the device so the timetable still
-opens when you have no connection.</p>
-
-<h2>What stays on your device</h2>
-<p>The only information the app saves is what you create while using it:</p>
-<ul>
-  <li>Your saved favorites and the folders you organize them into</li>
-  <li>Your Quran bookmarks and where you last stopped reading</li>
-  <li>Your preferences (theme, translation language, reciter, and text sizes)</li>
-  <li>Recitation audio you have downloaded or that has been cached while streaming</li>
-  <li>The prayer timetable last fetched for your location or zone, and the zone last looked
-  up for you, so the timetable still opens offline</li>
-</ul>
-<p>This information is stored only on your device using Apple's standard on-device
-storage. It is never uploaded anywhere, and deleting the app deletes it.</p>
-
-<h2>Where the content comes from</h2>
-<p>The Mushaf layout, page fonts and Arabic script are from the King Fahd Glorious Qur'an
-Printing Complex (QPC v4). Translations, tafsirs and recitations are from the Quranic
-Universal Library (QUL, qul.tarteel.ai). Prayer times come from the services named above.
-The full list is in the app under Settings, About &amp; privacy, Credits. Those sites have
-their own privacy policies, which this page does not cover.</p>
-
-<h2>Sharing</h2>
-<p>When you use the share feature, the dua image or text is handed to the iOS share
-sheet, and where it goes is entirely your choice. The app itself sends nothing.</p>
+<p>Decline or withdraw location access in iOS Settings &gt; Privacy &amp; Security &gt; Location
+Services &gt; Muhsin, and choose a city or zone by name instead. Turn alerts off in Muhsin's
+Settings or in iOS Settings. Delete the app to remove everything it saved.</p>
 
 <h2>Children</h2>
 <p>The app is rated 4+ and collects no personal data from anyone, including children.</p>
 
-<h2>Changes to this policy</h2>
-<p>If this policy changes, the updated version will be posted at this address with a new
-effective date. Version 1.0, published in August 2026 as Authentic Dua, made no network
-requests at all. Version 2.0, Muhsin, adds recitation audio, prayer times, alerts and the
-lock-screen widget, and this policy describes it.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at this address with a new effective
+date.</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy: <a href="mailto:maribelajar.app@gmail.com">maribelajar.app@gmail.com</a></p>
+<p>Muhammad Azrin Zulbahrin · <a href="mailto:maribelajar.app@gmail.com">maribelajar.app@gmail.com</a></p>
 </body>
 </html>

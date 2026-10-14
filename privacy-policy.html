@@ -44,43 +44,23 @@ personal data is sent.</p>
 header comes from Apple's own location services on your device.</p>
 
 <h2>Prayer times</h2>
-<p>Which service answers depends on where you are and the calculation authority you chose:</p>
-<ul>
-  <li><strong>Outside Malaysia, and in Malaysia on any authority other than JAKIM:</strong>
-  <a href="https://aladhan.com">AlAdhan</a>, with <a href="https://ummahapi.com">UmmahAPI</a>
-  as a fallback.</li>
-  <li><strong>In Malaysia on JAKIM:</strong> <a href="https://api.waktusolat.app/">waktusolat.app</a>
-  finds your JAKIM zone from the rounded location, then JAKIM's own
-  <a href="https://www.e-solat.gov.my/">e-Solat</a> service gives the timetable for that zone.
-  Only the zone code is sent for the timetable, with waktusolat.app as a fallback.</li>
-</ul>
-<ul>
-  <li>Your location is rounded to two decimal places (about 1 km) before anything is sent. The
-  exact position never leaves your device.</li>
-  <li>If you decline location access, you choose a city or prayer zone by name, and only that
-  name or zone code is sent.</li>
-  <li>No account, device identifier or advertising identifier is sent, and no cookies are kept.
-  As with any internet request, a service can see your IP address; what it keeps in its own
-  logs is up to that service.</li>
-  <li>iOS may repeat the same request in the background to keep alerts current. Muhsin never
-  takes a new location fix in the background.</li>
-</ul>
+<p>Prayer times come from <a href="https://aladhan.com">AlAdhan</a>,
+<a href="https://ummahapi.com">UmmahAPI</a>, <a href="https://www.e-solat.gov.my/">e-Solat JAKIM</a>
+and <a href="https://api.waktusolat.app/">waktusolat.app</a>, depending on where you are. If you
+prefer not to share your location, choose a city or prayer zone by name instead.</p>
 
 <h2>Recitation audio</h2>
-<p>Audio comes from Tarteel's audio network (audio-cdn.tarteel.ai). When you play or download a
-recitation, your phone requests the file from that host, which can see your IP address.
-Nothing else is sent.</p>
+<p>Audio is streamed from Tarteel's audio network (audio-cdn.tarteel.ai).</p>
 
 <h2>On your device</h2>
 <p>Favorites, bookmarks, your reading position, preferences, downloaded audio and the last
-prayer times fetched stay on your device and are deleted with the app. Prayer alerts are local
-notifications, and the lock-screen widget only shows times already stored on your device.
-Muhsin has no server, and the developer receives none of this data.</p>
+prayer times fetched stay on your device and are deleted with the app. Muhsin has no server,
+and the developer receives none of this data.</p>
 
 <h2>Your choices</h2>
 <p>Decline or withdraw location access in iOS Settings &gt; Privacy &amp; Security &gt; Location
-Services &gt; Muhsin, and choose a city or zone by name instead. Turn alerts off in Muhsin's
-Settings or in iOS Settings. Delete the app to remove everything it saved.</p>
+Services &gt; Muhsin. Turn alerts off in Muhsin's Settings or in iOS Settings. Delete the app to
+remove everything it saved.</p>
 
 <h2>Children</h2>
 <p>The app is rated 4+ and collects no personal data from anyone, including children.</p>
